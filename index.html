@@ -7,8 +7,8 @@
 </head>
 <body>
     <div id="app1">
-        {{firstName}}
-        {{lastName}}
+        {{` ${firstName} ${lastName.toUpperCase()}`}} 
+        <!-- This is not convenient! most of the time you should seperate the logic from the view!!! -->
     </div>
     <!-- <div id="app2">
         {{firstName}}

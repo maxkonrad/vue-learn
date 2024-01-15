@@ -6,6 +6,11 @@ const vm = Vue.createApp({ //short for view-model
             firstName: "John",
             lastName: "Doe"
         }
+    },
+    methods: {
+        fullName(){// see that we are not using ES6 arrow functions as it may cause issues
+            return `${this.firstName} ${this.lastName.toUpperCase()}` // mention that we used this.blabla 
+        }
     }
 }).mount("#app1")
 

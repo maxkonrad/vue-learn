@@ -3,7 +3,10 @@ const vm = Vue.createApp({
         return {
             firstName: "John",
             lastName: "Doe",
-            url: "https://google.com"
+            url: "https://google.com",
+            raw_url: "<p><a href='https://google.com' target='_blank'>Google</a></p>"
+            // THIS IS RAW HTML BINDING AN MAY CAUSE SECURITY RISKS LIKE XSS
+            
         }
     },
     methods: {

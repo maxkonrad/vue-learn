@@ -8,6 +8,10 @@
 </head>
 <body>
     <div id="app" v-cloak>
+        <p><a v-bind:href="url" target="_blank">Google</a></p>
+        <!-- SAME WITH -->
+        <p><a :href="url" target="_blank">Google</a></p>
+        <hr />
         <p>{{fullName()}}</p>
         <hr />
         

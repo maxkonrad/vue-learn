@@ -21,7 +21,8 @@
         <label>First Name</label>
         <input type="text" v-model="firstName" />
         <label>Last Name</label>
-        <input type="text" :value="lastName" @input="updateLastName"/>
+        <input type="text" :value="lastName" @input="updateLastName('LAST NAME EVENT TRIGGERED', $event)"/>
+        <!-- I THINK THIS ONE WAS ABOUT FUNCTION PARAMETERS, IN THE LAST ONE THERE WAS NO PARAMETER ENTERED NOT EVEN A PARANTHESIS BUT HERE WE ENTER OUR MSG AND EVENT THINGY -->
         <!-- THESE INPUTS ARE DOING THE SAME THING BUT THE SECOND ONE CAN DO MORE STUFF IN THE MODEL SECTION -->
 
     </div>    

@@ -23,10 +23,10 @@
         <label>Last Name</label>
         <input type="text" :value="lastName" @input.prevent="updateLastName('LAST NAME EVENT TRIGGERED', $event)"/>
         <label>Age</label>
-        <input type="text" v-model="age" />
-        <!-- when age is selected and changed it is type is converted into string but we don't want that. -->
-        <!-- we want it to be number all the time -->
-
+        <input type="number" v-model.number="age" />
+        <!-- using type number we prevent user from prompting nun-numeric chars  -->
+        <!-- using number modifier we make the type of age number when entered so -->
+        <!-- input type number doesn't work in firefox, works like a charm in chrome (and/or chromium based ones) -->
     </div>    
 </body>
 

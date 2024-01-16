@@ -11,7 +11,7 @@
         
         <p>{{fullName()}}</p>
         <hr />
-        <p>{{age}}</p>
+        <p>{{typeof age}}</p>
         <button type="button" @click="increment">Increment</button> 
         <button type="button" @click.ctrl="age--">Decrement</button>
         <hr>
@@ -22,9 +22,10 @@
         <input type="text" @keyup.enter="updateMiddleName" />
         <label>Last Name</label>
         <input type="text" :value="lastName" @input.prevent="updateLastName('LAST NAME EVENT TRIGGERED', $event)"/>
-        <!-- age decrements when ctrl is pressed down so, and middle name updates when enter key is released -->
-        <!-- see https://vuejs.org/guide/essentials/event-handling.html#key-modifiers -->
-        <!-- and https://keycode.info -->
+        <label>Age</label>
+        <input type="text" v-model="age" />
+        <!-- when age is selected and changed it is type is converted into string but we don't want that. -->
+        <!-- we want it to be number all the time -->
 
     </div>    
 </body>

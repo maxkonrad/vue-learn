@@ -16,7 +16,7 @@ const vm = Vue.createApp({
             this.age++
         },
         updateLastName(msg, event){
-            event.preventDefault() // I think this one helps use vue instead of vanilla js by blocking it!!!
+            // REMOVED THIS event.preventDefault() // I think this one helps use vue instead of vanilla js by blocking it!!!
             console.log(msg)         
             this.lastName = event.target.value
         }

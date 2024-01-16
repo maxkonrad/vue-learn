@@ -2,6 +2,7 @@ const vm = Vue.createApp({
     data() {
         return {
             firstName: "John",
+            middleName: "",
             lastName: "Doe",
             url: "https://google.com",
             raw_url: "<p><a href='https://google.com' target='_blank'>Google</a></p>",
@@ -10,15 +11,17 @@ const vm = Vue.createApp({
     },
     methods: {
         fullName(){
-            return `${this.firstName} ${this.lastName.toUpperCase()}`
+            return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`
         },
         increment(){
             this.age++
         },
         updateLastName(msg, event){
-            // REMOVED THIS event.preventDefault() // I think this one helps use vue instead of vanilla js by blocking it!!!
             console.log(msg)         
             this.lastName = event.target.value
+        },
+        updateMiddleName(event){
+            this.middleName = event.target.value
         }
     }
 }).mount("#app")

@@ -13,14 +13,18 @@
         <hr />
         <p>{{age}}</p>
         <button type="button" @click="increment">Increment</button> 
-        <button type="button" @click="age--">Decrement</button>
+        <button type="button" @click.ctrl="age--">Decrement</button>
         <hr>
         
         <label>First Name</label>
         <input type="text" v-model="firstName" />
+        <label>Middle Name</label>
+        <input type="text" @keyup.enter="updateMiddleName" />
         <label>Last Name</label>
         <input type="text" :value="lastName" @input.prevent="updateLastName('LAST NAME EVENT TRIGGERED', $event)"/>
-        <!-- ADDED THIS please see event modifiers -->
+        <!-- age decrements when ctrl is pressed down so, and middle name updates when enter key is released -->
+        <!-- see https://vuejs.org/guide/essentials/event-handling.html#key-modifiers -->
+        <!-- and https://keycode.info -->
 
     </div>    
 </body>
